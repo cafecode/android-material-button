@@ -1,17 +1,54 @@
 package me.cafecode.android.material.button.sample;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
 public class MainActivity extends ActionBarActivity {
 
+    private ListView mListView;
+    private String[] mMenuTitles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mListView = (ListView) findViewById(R.id.list);
+
+        mMenuTitles = new String[]{"Raised button", "Floating action button", "Flat button", "Other button"};
+
+        mListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mMenuTitles));
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+
+                switch (position) {
+                    case 0:
+                        intent.setClass(MainActivity.this, RaisedButtonActivity.class);
+                        break;
+                    case 1:
+                        intent.setClass(MainActivity.this, FloatingActionButtonActivity.class);
+                        break;
+                    case 2:
+                        intent.setClass(MainActivity.this, FlatButtonActivity.class);
+                        break;
+                    default:
+                        intent.setClass(MainActivity.this, OtherButtonActivity.class);
+                        break;
+                }
+
+                startActivity(intent);
+            }
+        });
+
     }
 
 
