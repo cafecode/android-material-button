@@ -47,4 +47,18 @@
     <color name="raised_black_text_enabled">#000</color>
     <color name="raised_black_text_disabled">#42000000</color>
 
+    <!-- Floating action button colors -->
+    <color name="floating_primary_button_normal">#009688</color>
+    <color name="floating_primary_button_hover">#00897B</color>
+    <color name="floating_primary_button_focused">#00897B</color>
+    <color name="floating_primary_button_pressed">#00796B</color>
+
+    <color name="floating_default_button_normal">#fff</color>
+    <color name="floating_default_button_hover">#E0E0E0</color>
+    <color name="floating_default_button_focused">#E0E0E0</color>
+    <color name="floating_default_button_pressed">#BDBDBD</color>
+
+    <color name="floating_light_button_disabled">#1e000000</color>
+    <color name="floating_dark_button_disabled">#1effffff</color>
+
 </resources>

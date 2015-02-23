@@ -44,6 +44,13 @@
     <style name="Button.Floating">
         <item name="android:background">@drawable/bg_floating_default_button</item>
         <item name="android:padding">16dp</item>
+        <item name="android:elevation">5dp</item>
+    </style>
+
+    <style name="Button.Floating.Light">
+        <item name="android:background">@drawable/bg_floating_light_button</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:elevation">5dp</item>
     </style>
 
     <style name="Button.Floating.Mini" parent="Button.Floating">
